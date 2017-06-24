@@ -42,3 +42,10 @@ header h1 {
 .content h2 span {
   text-transform: uppercase;
 }
+
+
+/*** Starships Content ***/
+
+.starships {
+  list-style: none;
+}
