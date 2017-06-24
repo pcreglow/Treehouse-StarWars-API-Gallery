@@ -52,7 +52,6 @@ header h1 {
 .starships {
   list-style: none;
   width: 100%;
-  margin-top: 2%;
   padding: 0;
 }
 
@@ -69,4 +68,25 @@ header h1 {
 
 .starship:hover {
   background: #000;
+}
+
+/*** Tablet & Desktop Media Query ***/
+
+@media screen and (min-width: 768px) {
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  .content h2 {
+    font-size: 1.8em;
+  }
+
+  .starship {
+    width: 40%;
+    display: inline-block;
+    margin: 2.5% 5%;
+    font-size: 1.2em;
+  }
+
 }
