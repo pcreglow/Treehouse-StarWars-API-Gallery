@@ -2,4 +2,13 @@
     box-sizing: border-box;
     font-family: 'Pathway Gothic One', sans-serif;
     margin: 0;
+    background: #000;
+}
+
+#container {
+  margin: 10% 5% 5%;
+  border-radius: 4px;
+  background: gray;
+  width: 90%;
+  height: 500px;
 }
