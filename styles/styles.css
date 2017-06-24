@@ -5,10 +5,17 @@
     background: #000;
 }
 
+header h1 {
+ color: #81EBFC;
+ text-align: center;
+ margin: 2.5%;
+}
+
 #container {
-  margin: 10% 5% 5%;
+  margin: 0 5% 5%;
   border-radius: 4px;
-  background: gray;
+  background: #808080;
   width: 90%;
   height: 500px;
+  color: #000;
 }
