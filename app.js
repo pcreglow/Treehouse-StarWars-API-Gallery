@@ -1,13 +1,13 @@
-var vehicles = "http://swapi.co/api/vehicles/";
+var starships = "http://swapi.co/api/starships/";
 
-$.getJSON(vehicles,
-    function(vehicle) {
+$.getJSON(starships,
+    function(starship) {
         var statusHTML = '<ul>';
-        $.each(vehicle.results, function(i, vehicle) {
+        $.each(starship.results, function(i, starship) {
             statusHTML += '<li>';
-            statusHTML += vehicle.name + '</li>';
-            console.log(vehicle.name);
-        });
+            statusHTML += starship.name + '</li>';
+            console.log(starship.name);
+        }); // for each results
         statusHTML += '</ul>';
-        $('.vehicles').html(statusHTML)
+        $('.starships').html(statusHTML)
     }); // end getJSON
