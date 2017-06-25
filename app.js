@@ -9,5 +9,16 @@ $.getJSON(starships,
             console.log(starship.name);
         }); // for each results
         statusHTML += '</ul>';
-        $('.starshipsFleet').html(statusHTML)
+        $('.starshipsFleet').html(statusHTML);
+
+        $(".starship").click(function(event) {
+            var lightbox = '<div id="lightbox">';
+            lightbox += '<p>' + "Star Wars" + '</p>';
+            lightbox += '</div>';
+            $("body").append(lightbox);
+            $("#lightbox").show();
+            $('#lightbox').click(function(event) {
+                $("#lightbox").hide();
+            });
+        }); // end Lightbox
     }); // end getJSON

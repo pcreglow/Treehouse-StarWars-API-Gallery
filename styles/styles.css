@@ -74,6 +74,20 @@ header h1 {
     background: #000;
 }
 
+/*** Lightbox ***/
+
+#lightbox {
+    background: #3c3c3c;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+    color: #000;
+}
+
 
 /*** Tablet & Desktop Media Query ***/
 
