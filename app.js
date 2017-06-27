@@ -19,10 +19,12 @@
 
               $.getJSON(starshipSearch,
                   function(shipData) {
-                    var shipHTML = '<p>'
+                    var shipHTML = '<div class="lightbox">'
                     $.each(shipData.results, function(i, shipData) {
-                     shipHTML += shipData.model;
-                    shipHTML += '</p>';
+                     shipHTML +='<h4>' + shipData.name + '</h4>';
+                     shipHTML +='<p>Model: ' + shipData.model + '</p>';
+                     shipHTML +='<p>Manufacturer: ' + shipData.manufacturer + '</p>';
+                     shipHTML += '</div>';
                   });
                     console.log(shipHTML);
                   });
