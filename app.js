@@ -6,7 +6,7 @@
             $.each(starship.results, function(i, starship) {
                 statusHTML += '<li class="starship">';
                 statusHTML += starship.name + '</li>';
-            }); // for each results
+            }); // for each starship results
             statusHTML += '</ul>';
             $('.starshipsFleet').html(statusHTML);
 
@@ -25,8 +25,9 @@
                      shipHTML +='<p>Model: ' + shipData.model + '</p>';
                      shipHTML +='<p>Manufacturer: ' + shipData.manufacturer + '</p>';
                      shipHTML += '</div>';
-                  });
+                  }); // for each shipData results
                     console.log(shipHTML);
-                  });
-            }); // click handler for starshi li
-        }); // end getJSON
+                    
+                  }); // end getJSON starshipSearch
+            }); // click handler for starship li
+        }); // end getJSON starships
