@@ -24,9 +24,12 @@ $(document).ready(function() {
                         var requestedShip = shipData.results[0];
                         console.log(requestedShip);
                         var shipHTML = '<h1>' + requestedShip.name + '</h1>';
-                        shipHTML += '<div class="shipinfo">'; 
-                        shipHTML += '<h4>Model: ' + requestedShip.model + '</h4>';
-                        shipHTML += '<h4>Manufacturer: ' + requestedShip.manufacturer + '</h4>';
+                        shipHTML += '<div class="shipinfo">';
+                        shipHTML += '<h4><span>Model:</span> ' + requestedShip.model + '</h4>';
+                        shipHTML += '<h4><span>Manufacturer:</span> ' + requestedShip.manufacturer + '</h4>';
+                        shipHTML += '<h4><span>Starship Class:</span> ' + requestedShip.starship_class + '</h4>';
+                        shipHTML += '<h4><span>Hyperdrive Rating:</span> ' + requestedShip.hyperdrive_rating+ '</h4>';
+                        shipHTML += '<h4><span>Megalight:</span> ' + requestedShip.MGLT + '</h4>';
                         shipHTML += '</div>';
                         $lightbox.html(shipHTML);
                         $lightbox.show();

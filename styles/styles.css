@@ -109,6 +109,11 @@ header h1 {
   color: #000;
   font-size: 1.2em;
   padding: 1% 0;
+  font-weight: 200;
+}
+
+#lightbox h4 span {
+  text-transform: uppercase;
 }
 
 /*** Tablet & Desktop Media Query ***/
