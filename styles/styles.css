@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Pathway Gothic One', sans-serif;
+    margin: 0;
+}
+
+body {
+    background: #000;
+}
+
+header {
+    margin: 2.5% 0;
+}
+
+header h1 {
+    color: #81EBFC;
+    text-align: center;
+    margin: 0 5%;
+    font-size: 1.5em;
+    padding: 2.5%;
+}
+
+#container {
+    margin: 0 5% 5%;
+    background: #808080;
+    width: 90%;
+    height: auto;
+    border-radius: 6px;
+    position: relative;
+}
+
+.content {
+    padding: 2%;
+    width: 95%;
+    margin: 2.5%;
+}
+
+.content h2 {
+    color: #000;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em 1em;
+    font-size: 1em;
+}
+
+.content h2 span {
+    text-transform: uppercase;
+    color: #E5B13A;
+    font-size: 1.5em;
+}
+
+
+/*** Starships Content ***/
+
+.starships {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.starship {
+    width: 90%;
+    margin: 5%;
+    background: #555;
+    color: #81EBFC;
+    border: 2px solid #000;
+    border-radius: 6px;
+    text-align: center;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.starship:hover {
+    background: #000;
+}
+
+
+/*** Lightbox ***/
+
+#lightbox {
+    background: #555;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+}
+
+#lightbox h1 {
+  color: #81EBFC;
+  text-align: center;
+  font-size: 2em;
+  padding: 2.5% 2.5% 1%;
+  text-transform: uppercase;
+}
+
+#lightbox .shipinfo {
+  background: #888;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 1% 2.5%;
+  width: 90%;
+  margin: 0 5%;
+}
+
+#lightbox h4 {
+  color: #000;
+  font-size: 1em;
+  padding: 1% 0;
+  font-weight: 200;
+}
+
+#lightbox h4 span {
+  text-transform: uppercase;
+}
+
+#lightbox .shipinfo button {
+  margin: 5% 0;
+  padding: 1% 2%;
+  font-size: 1em;
+  border: 2px solid #000;
+  color: #81EBFC;
+  background: #555;
+  border-radius: 6px;
+}
+
+#lightbox .shipinfo button:hover {
+  cursor: pointer;
+  background: #000;
+}
+
+
+/*** Tablet & Desktop Media Query ***/
+
+@media screen and (min-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .content h2 {
+        font-size: 1.8em;
+    }
+    .starship {
+        width: 40%;
+        display: inline-block;
+        margin: 2.5% 5%;
+        font-size: 1.2em;
+    }
+    #lightbox .shipinfo {
+      width: 60%;
+      margin: 0 20%;
+    }
+    #lightbox h4 {
+      font-size: 1.2em;
+    }
+}
