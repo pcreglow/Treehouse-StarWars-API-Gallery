@@ -88,9 +88,27 @@ header h1 {
     text-align: center;
 }
 
-#lightbox h4,
-#lightbox p {
-  color: #fff;
+#lightbox h1 {
+  color: #81EBFC;
+  text-align: center;
+  font-size: 2em;
+  padding: 2.5% 2.5% 1%;
+  text-transform: uppercase;
+}
+
+#lightbox .shipinfo {
+  background: #888;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 1% 2.5%;
+  width: 60%;
+  margin: 0 20%;
+}
+
+#lightbox h4 {
+  color: #000;
+  font-size: 1.2em;
+  padding: 1% 0;
 }
 
 /*** Tablet & Desktop Media Query ***/

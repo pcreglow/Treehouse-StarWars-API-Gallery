@@ -23,10 +23,11 @@ $(document).ready(function() {
                     function(shipData) {
                         var requestedShip = shipData.results[0];
                         console.log(requestedShip);
-                        var shipHTML = '<h4>' + requestedShip.name + '</h4>';
-                        shipHTML += '<p>Model: ' + requestedShip.model + '</p>';
-                        shipHTML += '<p>Manufacturer: ' + requestedShip.manufacturer + '</p>';
-
+                        var shipHTML = '<h1>' + requestedShip.name + '</h1>';
+                        shipHTML += '<div class="shipinfo">'; 
+                        shipHTML += '<h4>Model: ' + requestedShip.model + '</h4>';
+                        shipHTML += '<h4>Manufacturer: ' + requestedShip.manufacturer + '</h4>';
+                        shipHTML += '</div>';
                         $lightbox.html(shipHTML);
                         $lightbox.show();
                     }); // end getJSON starshipSearch
