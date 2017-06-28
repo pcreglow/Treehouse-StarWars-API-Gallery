@@ -15,6 +15,7 @@ $(document).ready(function() {
             var $lightbox = $('<div id="lightbox"></div>');
             $("#container").append($lightbox);
 
+
             $(".starship").click(function(event) {
                 var shipClass = $(this).text();
                 var starshipSearch = "http://swapi.co/api/starships/?search=" + shipClass;
@@ -30,6 +31,7 @@ $(document).ready(function() {
                         shipHTML += '<h4><span>Starship Class:</span> ' + requestedShip.starship_class + '</h4>';
                         shipHTML += '<h4><span>Hyperdrive Rating:</span> ' + requestedShip.hyperdrive_rating+ '</h4>';
                         shipHTML += '<h4><span>Megalight:</span> ' + requestedShip.MGLT + '</h4>';
+                        shipHTML += '<button>Return to Star Wars Starships</button>'
                         shipHTML += '</div>';
                         $lightbox.html(shipHTML);
                         $lightbox.show();
