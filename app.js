@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
     var starships = "http://swapi.co/api/starships/";
 
     $.getJSON(starships,
@@ -10,24 +12,30 @@
             statusHTML += '</ul>';
             $('.starshipsFleet').html(statusHTML);
 
+            var $lightbox = $('<div id="lightbox"></div>');
+            $("#container").append($lightbox);
 
-            $(".starship").click(function(data) {
+            $(".starship").click(function(event) {
+                var shipClass = $(this).text();
+                var starshipSearch = "http://swapi.co/api/starships/?search=" + shipClass;
 
-              var shipClass = $(this).text();
+                $.getJSON(starshipSearch,
+                    function(shipData) {
+                        var requestedShip = shipData.results[0];
+                        console.log(requestedShip);
+                        var shipHTML = '<h4>' + requestedShip.name + '</h4>';
+                        shipHTML += '<p>Model: ' + requestedShip.model + '</p>';
+                        shipHTML += '<p>Manufacturer: ' + requestedShip.manufacturer + '</p>';
 
-              var starshipSearch = "http://swapi.co/api/starships/?search=" + shipClass;
+                        $lightbox.html(shipHTML);
+                        $lightbox.show();
+                    }); // end getJSON starshipSearch
 
-              $.getJSON(starshipSearch,
-                  function(shipData) {
-                    var shipHTML = '<div class="lightbox">'
-                    $.each(shipData.results, function(i, shipData) {
-                     shipHTML +='<h4>' + shipData.name + '</h4>';
-                     shipHTML +='<p>Model: ' + shipData.model + '</p>';
-                     shipHTML +='<p>Manufacturer: ' + shipData.manufacturer + '</p>';
-                     shipHTML += '</div>';
-                  }); // for each shipData results
-                    console.log(shipHTML);
-                    
-                  }); // end getJSON starshipSearch
             }); // click handler for starship li
+
+            $("#lightbox").click(function() {
+                $(this).hide();
+            }); // hide lightbox
+
         }); // end getJSON starships
+});
